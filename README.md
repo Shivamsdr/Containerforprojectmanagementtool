@@ -1,5 +1,7 @@
-# Project Management Tool
 
+# Project Management Tool
+#Details
+Name: Shivam Yadav
 This is a MERN stack (MongoDB, Express, React, Node.js) Project Management application.
 
 ## 1. Steps to Run Locally
@@ -37,8 +39,8 @@ Below are the key Docker commands utilized in this project:
 
 ## 3. Deployment Link
 
-**Backend Live URL**: [YOUR_RENDER_BACKEND_URL_HERE] 
-*(Note: Replace the placeholder above with your actual Render deployment URL once you deploy. You can deploy easily by connecting this repository to Render, as a `render.yaml` blueprint is already included in the project root.)*
+**Backend Live URL**: [https://pm-tool-backend-c05c.onrender.com/] 
+*(Note: Replace the placeholder above with your actual Render deployment URL once you deploy. You can deploy easily by connecting this repository to Render, as a `render.yaml` blueprint is already included in the project root.) also check the url using /api/health at the end of the url*
 
 ## 4. Architecture Explanation
 
