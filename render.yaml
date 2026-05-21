@@ -1,0 +1,32 @@
+services:
+  # --- BACKEND ---
+  - type: web
+    name: pm-tool-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false # You must set this manually in the Render Dashboard
+      - key: JWT_SECRET
+        sync: false # You must set this manually in the Render Dashboard
+      - key: FRONTEND_URL
+        value: "https://pm-tool-frontend.onrender.com" # Replace with actual frontend URL once generated
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+
+  # --- FRONTEND ---
+  - type: web
+    name: pm-tool-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: "https://pm-tool-backend.onrender.com" # Replace with actual backend URL once generated
